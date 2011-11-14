@@ -3273,6 +3273,7 @@ EXPORT_SYMBOL vmlinux 0x61ab4a66	slow_work_unregister_user
 EXPORT_SYMBOL vmlinux 0x61b7b126	simple_strtoull
 EXPORT_SYMBOL vmlinux 0x61c06300	con_copy_unimap
 EXPORT_SYMBOL vmlinux 0x61ff9b45	jbd2_journal_release_buffer
+EXPORT_SYMBOL vmlinux 0x6225637e	md5_transform
 EXPORT_SYMBOL vmlinux 0x6226b9fa	machine_to_phys_mapping
 EXPORT_SYMBOL vmlinux 0x62349c17	cdev_index
 EXPORT_SYMBOL vmlinux 0x62737e1d	sock_unregister
@@ -4771,6 +4772,7 @@ EXPORT_SYMBOL vmlinux 0xe18ca56e	__generic_block_fiemap
 EXPORT_SYMBOL vmlinux 0xe1c02d87	tcp_proc_unregister
 EXPORT_SYMBOL vmlinux 0xe1db6f35	get_sb_pseudo
 EXPORT_SYMBOL vmlinux 0xe1e06479	gnet_stats_start_copy
+EXPORT_SYMBOL vmlinux 0xe200f872	secure_dccpv6_sequence_number
 EXPORT_SYMBOL vmlinux 0xe22aea15	vfs_follow_link
 EXPORT_SYMBOL vmlinux 0xe239da78	bd_set_size
 EXPORT_SYMBOL vmlinux 0xe23ae481	blk_iopoll_complete

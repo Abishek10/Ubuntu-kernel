@@ -3271,6 +3271,7 @@ EXPORT_SYMBOL vmlinux 0x61b7b126	simple_strtoull
 EXPORT_SYMBOL vmlinux 0x61e2fe7f	security_path_truncate
 EXPORT_SYMBOL vmlinux 0x61f6d6ee	arp_tbl
 EXPORT_SYMBOL vmlinux 0x62080f1b	ppp_unregister_channel
+EXPORT_SYMBOL vmlinux 0x6225637e	md5_transform
 EXPORT_SYMBOL vmlinux 0x6226b9fa	machine_to_phys_mapping
 EXPORT_SYMBOL vmlinux 0x6227d55a	del_gendisk
 EXPORT_SYMBOL vmlinux 0x6227f618	vfs_quota_on_mount
@@ -4737,6 +4738,7 @@ EXPORT_SYMBOL vmlinux 0xe1761617	security_inet_conn_request
 EXPORT_SYMBOL vmlinux 0xe181d0d8	splice_direct_to_actor
 EXPORT_SYMBOL vmlinux 0xe19d8fc6	alloc_tty_driver
 EXPORT_SYMBOL vmlinux 0xe1b02134	aio_put_req
+EXPORT_SYMBOL vmlinux 0xe200f872	secure_dccpv6_sequence_number
 EXPORT_SYMBOL vmlinux 0xe205ab58	iw_handler_set_thrspy
 EXPORT_SYMBOL vmlinux 0xe23ae481	blk_iopoll_complete
 EXPORT_SYMBOL vmlinux 0xe23d7acb	up_read
