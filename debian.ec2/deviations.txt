@@ -94,3 +94,5 @@ F:	arch/x86/include/asm/xenoprof.h
 F:	arch/x86/include/asm/xor_64.h
 F:	arch/x86/include/asm/xor.h
 F:	drivers/xen/*
+F:	drivers/block/xen-blkfront.c
+F:	drivers/net/xen-netfront.c
