@@ -7888,6 +7888,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xf6bcbd73	hwrng_register
 EXPORT_SYMBOL_GPL vmlinux 0xf6df113c	ring_buffer_alloc_read_page
 EXPORT_SYMBOL_GPL vmlinux 0xf7016530	xenbus_gather
 EXPORT_SYMBOL_GPL vmlinux 0xf7b0b871	inet6_hash_connect
+EXPORT_SYMBOL_GPL vmlinux 0xf7b1697a	__get_user_pages_fast
 EXPORT_SYMBOL_GPL vmlinux 0xf7b26a9a	tcp_set_state
 EXPORT_SYMBOL_GPL vmlinux 0xf7d6532a	blk_rq_unprep_clone
 EXPORT_SYMBOL_GPL vmlinux 0xf7fb4639	transport_class_register

@@ -7024,6 +7024,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x41c16386	do_kern_mount
 EXPORT_SYMBOL_GPL vmlinux 0x423acb70	fib_rules_unregister
 EXPORT_SYMBOL_GPL vmlinux 0x42494cea	ring_buffer_event_length
 EXPORT_SYMBOL_GPL vmlinux 0x424acc6d	scatterwalk_done
+EXPORT_SYMBOL_GPL vmlinux 0x424c582e	__get_user_pages_fast
 EXPORT_SYMBOL_GPL vmlinux 0x42832477	device_initialize
 EXPORT_SYMBOL_GPL vmlinux 0x42e1153f	skcipher_geniv_free
 EXPORT_SYMBOL_GPL vmlinux 0x42eee679	stop_machine
