@@ -1414,43 +1414,6 @@ void disable_all_local_evtchn(void)
 			synch_set_bit(i, &s->evtchn_mask[0]);
 }
 
-/* Clear an irq's pending state, in preparation for polling on it. */
-void xen_clear_irq_pending(int irq)
-{
-	int evtchn = evtchn_from_irq(irq);
-
-	if (VALID_EVTCHN(evtchn))
-		clear_evtchn(evtchn);
-}
-
-/* Set an irq's pending state, to avoid blocking on it. */
-void xen_set_irq_pending(int irq)
-{
-	int evtchn = evtchn_from_irq(irq);
-
-	if (VALID_EVTCHN(evtchn))
-		set_evtchn(evtchn);
-}
-
-/* Test an irq's pending state. */
-int xen_test_irq_pending(int irq)
-{
-	int evtchn = evtchn_from_irq(irq);
-
-	return VALID_EVTCHN(evtchn) && test_evtchn(evtchn);
-}
-
-/* Poll waiting for an irq to become pending.  In the usual case, the
-   irq will be disabled so it won't deliver an interrupt. */
-void xen_poll_irq(int irq)
-{
-	evtchn_port_t evtchn = evtchn_from_irq(irq);
-
-	if (VALID_EVTCHN(evtchn)
-	    && HYPERVISOR_poll_no_timeout(&evtchn, 1))
-		BUG();
-}
-
 #ifdef CONFIG_PM_SLEEP
 static void restore_cpu_virqs(unsigned int cpu)
 {

@@ -38,13 +38,20 @@
 # define UNLOCK_LOCK_PREFIX
 #endif
 
+#ifdef TICKET_SHIFT
+
+#include <asm/irqflags.h>
+#include <asm/smp-processor-id.h>
+#include <xen/interface/vcpu.h>
+
+DECLARE_PER_CPU(struct vcpu_runstate_info, runstate);
+
 int xen_spinlock_init(unsigned int cpu);
 void xen_spinlock_cleanup(unsigned int cpu);
-extern int xen_spin_wait(raw_spinlock_t *, unsigned int token);
-extern int xen_spin_wait_flags(raw_spinlock_t *, unsigned int *token,
-			       unsigned int flags);
-extern unsigned int xen_spin_adjust(raw_spinlock_t *, unsigned int token);
-extern void xen_spin_kick(raw_spinlock_t *, unsigned int token);
+bool xen_spin_wait(raw_spinlock_t *, unsigned int *token,
+		   unsigned int flags);
+unsigned int xen_spin_adjust(const raw_spinlock_t *, unsigned int token);
+void xen_spin_kick(raw_spinlock_t *, unsigned int token);
 
 /*
  * Ticket locks are conceptually two parts, one indicating the current head of
@@ -63,8 +70,7 @@ extern void xen_spin_kick(raw_spinlock_t *, unsigned int token);
  * save some instructions and make the code more elegant. There really isn't
  * much between them in performance though, especially as locks are out of line.
  */
-#if (NR_CPUS < 256)
-#define TICKET_SHIFT 8
+#if TICKET_SHIFT == 8
 #define __ticket_spin_lock_preamble \
 	asm(LOCK_PREFIX "xaddw %w0, %2\n\t" \
 	    "cmpb %h0, %b0\n\t" \
@@ -86,7 +92,14 @@ extern void xen_spin_kick(raw_spinlock_t *, unsigned int token);
 	    : "+Q" (token), "+g" (count) \
 	    : "m" (lock->slock) \
 	    : "memory", "cc")
-
+#define __ticket_spin_unlock_body \
+	asm(UNLOCK_LOCK_PREFIX "incb %2\n\t" \
+	    "movzwl %2, %0\n\t" \
+	    "cmpb %h0, %b0\n\t" \
+	    "setne %1" \
+	    : "=&Q" (token), "=qm" (kick), "+m" (lock->slock) \
+	    : \
+	    : "memory", "cc")
 
 static __always_inline int __ticket_spin_trylock(raw_spinlock_t *lock)
 {
@@ -104,26 +117,12 @@ static __always_inline int __ticket_spin_trylock(raw_spinlock_t *lock)
 	    :
 	    : "memory", "cc");
 
+	if (tmp)
+		lock->owner = raw_smp_processor_id();
+
 	return tmp;
 }
-
-static __always_inline void __ticket_spin_unlock(raw_spinlock_t *lock)
-{
-	unsigned int token;
-	unsigned char kick;
-
-	asm(UNLOCK_LOCK_PREFIX "incb %2\n\t"
-	    "movzwl %2, %0\n\t"
-	    "cmpb %h0, %b0\n\t"
-	    "setne %1"
-	    : "=&Q" (token), "=qm" (kick), "+m" (lock->slock)
-	    :
-	    : "memory", "cc");
-	if (kick)
-		xen_spin_kick(lock, token);
-}
-#else
-#define TICKET_SHIFT 16
+#elif TICKET_SHIFT == 16
 #define __ticket_spin_lock_preamble \
 	do { \
 		unsigned int tmp; \
@@ -154,6 +153,19 @@ static __always_inline void __ticket_spin_unlock(raw_spinlock_t *lock)
 		    : "m" (lock->slock) \
 		    : "memory", "cc"); \
 	} while (0)
+#define __ticket_spin_unlock_body \
+	do { \
+		unsigned int tmp; \
+		asm(UNLOCK_LOCK_PREFIX "incw %2\n\t" \
+		    "movl %2, %0\n\t" \
+		    "shldl $16, %0, %3\n\t" \
+		    "cmpw %w3, %w0\n\t" \
+		    "setne %1" \
+		    : "=&r" (token), "=qm" (kick), "+m" (lock->slock), \
+		      "=&r" (tmp) \
+		    : \
+		    : "memory", "cc"); \
+	} while (0)
 
 static __always_inline int __ticket_spin_trylock(raw_spinlock_t *lock)
 {
@@ -174,26 +186,16 @@ static __always_inline int __ticket_spin_trylock(raw_spinlock_t *lock)
 	    :
 	    : "memory", "cc");
 
+	if (tmp)
+		lock->owner = raw_smp_processor_id();
+
 	return tmp;
 }
-
-static __always_inline void __ticket_spin_unlock(raw_spinlock_t *lock)
-{
-	unsigned int token, tmp;
-	bool kick;
-
-	asm(UNLOCK_LOCK_PREFIX "incw %2\n\t"
-	    "movl %2, %0\n\t"
-	    "shldl $16, %0, %3\n\t"
-	    "cmpw %w3, %w0\n\t"
-	    "setne %1"
-	    : "=&r" (token), "=qm" (kick), "+m" (lock->slock), "=&r" (tmp)
-	    :
-	    : "memory", "cc");
-	if (kick)
-		xen_spin_kick(lock, token);
-}
 #endif
+
+#define __ticket_spin_count(lock) \
+	(per_cpu(runstate.state, (lock)->owner) == RUNSTATE_running \
+	 ? 1 << 10 : 2)
 
 static inline int __ticket_spin_is_locked(raw_spinlock_t *lock)
 {
@@ -212,16 +214,22 @@ static inline int __ticket_spin_is_contended(raw_spinlock_t *lock)
 static __always_inline void __ticket_spin_lock(raw_spinlock_t *lock)
 {
 	unsigned int token, count;
+	unsigned int flags = __raw_local_irq_save();
 	bool free;
 
 	__ticket_spin_lock_preamble;
 	if (likely(free))
-		return;
-	token = xen_spin_adjust(lock, token);
-	do {
-		count = 1 << 10;
-		__ticket_spin_lock_body;
-	} while (unlikely(!count) && !xen_spin_wait(lock, token));
+		raw_local_irq_restore(flags);
+	else {
+		token = xen_spin_adjust(lock, token);
+		raw_local_irq_restore(flags);
+		do {
+			count = __ticket_spin_count(lock);
+			__ticket_spin_lock_body;
+		} while (unlikely(!count)
+			 && !xen_spin_wait(lock, &token, flags));
+	}
+	lock->owner = raw_smp_processor_id();
 }
 
 static __always_inline void __ticket_spin_lock_flags(raw_spinlock_t *lock,
@@ -231,50 +239,123 @@ static __always_inline void __ticket_spin_lock_flags(raw_spinlock_t *lock,
 	bool free;
 
 	__ticket_spin_lock_preamble;
-	if (likely(free))
-		return;
-	token = xen_spin_adjust(lock, token);
-	do {
-		count = 1 << 10;
-		__ticket_spin_lock_body;
-	} while (unlikely(!count) && !xen_spin_wait_flags(lock, &token, flags));
+	if (unlikely(!free)) {
+		token = xen_spin_adjust(lock, token);
+		do {
+			count = __ticket_spin_count(lock);
+			__ticket_spin_lock_body;
+		} while (unlikely(!count)
+			 && !xen_spin_wait(lock, &token, flags));
+	}
+	lock->owner = raw_smp_processor_id();
 }
 
-#ifndef CONFIG_PARAVIRT_SPINLOCKS
+static __always_inline void __ticket_spin_unlock(raw_spinlock_t *lock)
+{
+	unsigned int token;
+	bool kick;
+
+	__ticket_spin_unlock_body;
+	if (kick)
+		xen_spin_kick(lock, token);
+}
+
+#ifndef XEN_SPINLOCK_SOURCE
+#undef __ticket_spin_lock_preamble
+#undef __ticket_spin_lock_body
+#undef __ticket_spin_unlock_body
+#undef __ticket_spin_count
+#endif
+
+#define __raw_spin(n) __ticket_spin_##n
+
+#else /* TICKET_SHIFT */
+
+static inline int xen_spinlock_init(unsigned int cpu) { return 0; }
+static inline void xen_spinlock_cleanup(unsigned int cpu) {}
+
+static inline int __byte_spin_is_locked(raw_spinlock_t *lock)
+{
+	return lock->lock != 0;
+}
+
+static inline int __byte_spin_is_contended(raw_spinlock_t *lock)
+{
+	return lock->spinners != 0;
+}
+
+static inline void __byte_spin_lock(raw_spinlock_t *lock)
+{
+	s8 val = 1;
+
+	asm("1: xchgb %1, %0\n"
+	    "   test %1,%1\n"
+	    "   jz 3f\n"
+	    "   " LOCK_PREFIX "incb %2\n"
+	    "2: rep;nop\n"
+	    "   cmpb $1, %0\n"
+	    "   je 2b\n"
+	    "   " LOCK_PREFIX "decb %2\n"
+	    "   jmp 1b\n"
+	    "3:"
+	    : "+m" (lock->lock), "+q" (val), "+m" (lock->spinners): : "memory");
+}
+
+#define __byte_spin_lock_flags(lock, flags) __byte_spin_lock(lock)
+
+static inline int __byte_spin_trylock(raw_spinlock_t *lock)
+{
+	u8 old = 1;
+
+	asm("xchgb %1,%0"
+	    : "+m" (lock->lock), "+q" (old) : : "memory");
+
+	return old == 0;
+}
+
+static inline void __byte_spin_unlock(raw_spinlock_t *lock)
+{
+	smp_wmb();
+	lock->lock = 0;
+}
+
+#define __raw_spin(n) __byte_spin_##n
+
+#endif /* TICKET_SHIFT */
 
 static inline int __raw_spin_is_locked(raw_spinlock_t *lock)
 {
-	return __ticket_spin_is_locked(lock);
+	return __raw_spin(is_locked)(lock);
 }
 
 static inline int __raw_spin_is_contended(raw_spinlock_t *lock)
 {
-	return __ticket_spin_is_contended(lock);
+	return __raw_spin(is_contended)(lock);
 }
 #define __raw_spin_is_contended	__raw_spin_is_contended
 
 static __always_inline void __raw_spin_lock(raw_spinlock_t *lock)
 {
-	__ticket_spin_lock(lock);
+	__raw_spin(lock)(lock);
 }
 
 static __always_inline int __raw_spin_trylock(raw_spinlock_t *lock)
 {
-	return __ticket_spin_trylock(lock);
+	return __raw_spin(trylock)(lock);
 }
 
 static __always_inline void __raw_spin_unlock(raw_spinlock_t *lock)
 {
-	__ticket_spin_unlock(lock);
+	__raw_spin(unlock)(lock);
 }
 
 static __always_inline void __raw_spin_lock_flags(raw_spinlock_t *lock,
 						  unsigned long flags)
 {
-	__ticket_spin_lock_flags(lock, flags);
+	__raw_spin(lock_flags)(lock, flags);
 }
 
-#endif	/* CONFIG_PARAVIRT_SPINLOCKS */
+#undef __raw_spin
 
 static inline void __raw_spin_unlock_wait(raw_spinlock_t *lock)
 {

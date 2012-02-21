@@ -96,6 +96,11 @@ static int show_other_interrupts(struct seq_file *p, int prec)
 	for_each_online_cpu(j)
 		seq_printf(p, "%10u ", irq_stats(j)->irq_tlb_count);
 	seq_printf(p, "  TLB shootdowns\n");
+#else
+	seq_printf(p, "LCK: ");
+	for_each_online_cpu(j)
+		seq_printf(p, "%10u ", irq_stats(j)->irq_lock_count);
+	seq_printf(p, "  Spinlock wakeups\n");
 #endif
 #endif
 #ifdef CONFIG_X86_THERMAL_VECTOR
