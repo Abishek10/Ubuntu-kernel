@@ -13,7 +13,7 @@ typedef union {
 /*
  * Xen versions prior to 3.2.x have a race condition with HYPERVISOR_poll().
  */
-#if CONFIG_XEN_COMPAT >= 0x030200
+#if CONFIG_XEN_COMPAT >= 0x030002
 /*
  * On Xen we support a single level of interrupt re-enabling per lock. Hence
  * we can have twice as many outstanding tickets. Thus the cut-off for using
