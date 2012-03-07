@@ -4851,6 +4851,7 @@ EXPORT_SYMBOL vmlinux 0xeb1fabf6	interruptible_sleep_on
 EXPORT_SYMBOL vmlinux 0xeb40a084	framebuffer_release
 EXPORT_SYMBOL vmlinux 0xeb8939c1	register_quota_format
 EXPORT_SYMBOL vmlinux 0xeb8f54b3	strstrip
+EXPORT_SYMBOL vmlinux 0xeba66f79	scsi_verify_blk_ioctl
 EXPORT_SYMBOL vmlinux 0xebb805b7	simple_unlink
 EXPORT_SYMBOL vmlinux 0xebb96c41	skb_dma_map
 EXPORT_SYMBOL vmlinux 0xebd273a6	strict_strtoull
@@ -5071,6 +5072,7 @@ EXPORT_SYMBOL vmlinux 0xfd1dbe22	lock_super
 EXPORT_SYMBOL vmlinux 0xfd26f475	direct_remap_pfn_range
 EXPORT_SYMBOL vmlinux 0xfd520665	input_unregister_device
 EXPORT_SYMBOL vmlinux 0xfd6f4850	native_wrmsr_safe_regs
+EXPORT_SYMBOL vmlinux 0xfd8f88f5	scsi_cmd_blk_ioctl
 EXPORT_SYMBOL vmlinux 0xfda85a7d	request_threaded_irq
 EXPORT_SYMBOL vmlinux 0xfdaa81d0	jbd2_journal_check_used_features
 EXPORT_SYMBOL vmlinux 0xfdb9b629	ioread32be

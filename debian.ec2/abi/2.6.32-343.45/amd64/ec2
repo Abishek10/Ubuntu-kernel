@@ -2343,6 +2343,7 @@ EXPORT_SYMBOL vmlinux 0x0d26a76d	_write_lock_irq
 EXPORT_SYMBOL vmlinux 0x0d542439	__ipv6_addr_type
 EXPORT_SYMBOL vmlinux 0x0d8d781c	jbd2_journal_errno
 EXPORT_SYMBOL vmlinux 0x0da10ec3	security_sock_graft
+EXPORT_SYMBOL vmlinux 0x0dedd200	scsi_verify_blk_ioctl
 EXPORT_SYMBOL vmlinux 0x0df3933f	net_accel_unmap_iomem_page
 EXPORT_SYMBOL vmlinux 0x0e2fb26c	read_dev_sector
 EXPORT_SYMBOL vmlinux 0x0e52592a	panic
@@ -3605,6 +3606,7 @@ EXPORT_SYMBOL vmlinux 0x78ccddfc	HYPERVISOR_shared_info
 EXPORT_SYMBOL vmlinux 0x78df6bd7	no_pci_devices
 EXPORT_SYMBOL vmlinux 0x78eef65c	ip_route_output_key
 EXPORT_SYMBOL vmlinux 0x79094af2	search_binary_handler
+EXPORT_SYMBOL vmlinux 0x790cab0f	scsi_cmd_blk_ioctl
 EXPORT_SYMBOL vmlinux 0x790f8d65	__dev_get_by_index
 EXPORT_SYMBOL vmlinux 0x794de490	blk_queue_resize_tags
 EXPORT_SYMBOL vmlinux 0x797e5075	genphy_resume
