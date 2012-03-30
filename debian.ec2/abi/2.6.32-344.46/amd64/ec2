@@ -3005,6 +3005,7 @@ EXPORT_SYMBOL vmlinux 0x494e3393	vm_get_page_prot
 EXPORT_SYMBOL vmlinux 0x4951f85a	pci_enable_device_io
 EXPORT_SYMBOL vmlinux 0x495c0f3e	xfrm_register_type
 EXPORT_SYMBOL vmlinux 0x49603fb8	security_sb_copy_data
+EXPORT_SYMBOL vmlinux 0x499a3316	sock_queue_err_skb
 EXPORT_SYMBOL vmlinux 0x49baceeb	sk_reset_timer
 EXPORT_SYMBOL vmlinux 0x49da9a9a	_read_unlock_bh
 EXPORT_SYMBOL vmlinux 0x49dbe0d2	mb_cache_entry_insert

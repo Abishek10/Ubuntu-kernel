@@ -4325,6 +4325,7 @@ EXPORT_SYMBOL vmlinux 0xbd146f65	config_item_put
 EXPORT_SYMBOL vmlinux 0xbd2380ea	do_truncate
 EXPORT_SYMBOL vmlinux 0xbd273045	backlight_device_unregister
 EXPORT_SYMBOL vmlinux 0xbd72afe6	dquot_acquire
+EXPORT_SYMBOL vmlinux 0xbd791f2f	sock_queue_err_skb
 EXPORT_SYMBOL vmlinux 0xbd8d56a7	tty_get_baud_rate
 EXPORT_SYMBOL vmlinux 0xbdb8c7ab	simple_write_end
 EXPORT_SYMBOL vmlinux 0xbdc1ecc3	read_cache_page
