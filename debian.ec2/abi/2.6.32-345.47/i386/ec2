@@ -2680,7 +2680,6 @@ EXPORT_SYMBOL vmlinux 0x2efe5e09	atomic64_xchg
 EXPORT_SYMBOL vmlinux 0x2f287f0d	copy_to_user
 EXPORT_SYMBOL vmlinux 0x2fc95d58	security_inode_setsecctx
 EXPORT_SYMBOL vmlinux 0x2ff18588	bio_copy_kern
-EXPORT_SYMBOL vmlinux 0x30030a3d	call_usermodehelper_setkeys
 EXPORT_SYMBOL vmlinux 0x3041ed2e	locks_remove_posix
 EXPORT_SYMBOL vmlinux 0x3046b5be	insert_inode_locked
 EXPORT_SYMBOL vmlinux 0x304b32c0	elv_rb_former_request
@@ -2832,6 +2831,7 @@ EXPORT_SYMBOL vmlinux 0x3ce98967	alloc_trdev
 EXPORT_SYMBOL vmlinux 0x3d0f0e4f	dmam_declare_coherent_memory
 EXPORT_SYMBOL vmlinux 0x3d2151e7	tty_check_change
 EXPORT_SYMBOL vmlinux 0x3d22e7fc	dev_load
+EXPORT_SYMBOL vmlinux 0x3d3fdb8b	call_usermodehelper_setfns
 EXPORT_SYMBOL vmlinux 0x3d4557cb	pci_set_dma_mask
 EXPORT_SYMBOL vmlinux 0x3d49c784	log_wait_commit
 EXPORT_SYMBOL vmlinux 0x3d634a4f	kill_block_super
@@ -2917,6 +2917,7 @@ EXPORT_SYMBOL vmlinux 0x43c3253b	km_state_notify
 EXPORT_SYMBOL vmlinux 0x43cc1f73	__break_lease
 EXPORT_SYMBOL vmlinux 0x43da15aa	xfrm_register_mode
 EXPORT_SYMBOL vmlinux 0x43f9844f	dma_ops
+EXPORT_SYMBOL vmlinux 0x43f9dd11	call_usermodehelper_setkeys
 EXPORT_SYMBOL vmlinux 0x44161c19	unregister_shrinker
 EXPORT_SYMBOL vmlinux 0x441fa1a0	blk_plug_device_unlocked
 EXPORT_SYMBOL vmlinux 0x44314efb	radix_tree_gang_lookup_tag_slot
@@ -3017,6 +3018,8 @@ EXPORT_SYMBOL vmlinux 0x4b34fbf5	block_all_signals
 EXPORT_SYMBOL vmlinux 0x4b3525a2	__page_symlink
 EXPORT_SYMBOL vmlinux 0x4b6cb139	seq_path
 EXPORT_SYMBOL vmlinux 0x4b8d21ee	tcf_hash_lookup
+EXPORT_SYMBOL vmlinux 0x4b9abbef	call_usermodehelper_freeinfo
+EXPORT_SYMBOL vmlinux 0x4babb1e8	call_usermodehelper_setup
 EXPORT_SYMBOL vmlinux 0x4bbc3e5f	pm_flags
 EXPORT_SYMBOL vmlinux 0x4bbdfaa5	sock_alloc_send_pskb
 EXPORT_SYMBOL vmlinux 0x4bfee15a	atomic64_set
@@ -3180,7 +3183,6 @@ EXPORT_SYMBOL vmlinux 0x58fd5f61	mb_cache_entry_find_next
 EXPORT_SYMBOL vmlinux 0x5934392b	fb_register_client
 EXPORT_SYMBOL vmlinux 0x594bf15b	ioport_map
 EXPORT_SYMBOL vmlinux 0x594edd50	sock_rfree
-EXPORT_SYMBOL vmlinux 0x59513dd9	call_usermodehelper_freeinfo
 EXPORT_SYMBOL vmlinux 0x595e1be1	inet_frag_kill
 EXPORT_SYMBOL vmlinux 0x59c32e62	pcie_port_service_register
 EXPORT_SYMBOL vmlinux 0x59d696b6	register_module_notifier
@@ -3604,6 +3606,7 @@ EXPORT_SYMBOL vmlinux 0x7e8af1b7	register_gifconf
 EXPORT_SYMBOL vmlinux 0x7e9ebb05	kernel_thread
 EXPORT_SYMBOL vmlinux 0x7eacfe55	get_write_access
 EXPORT_SYMBOL vmlinux 0x7ed1e497	qdisc_watchdog_schedule
+EXPORT_SYMBOL vmlinux 0x7edb3d88	call_usermodehelper_stdinpipe
 EXPORT_SYMBOL vmlinux 0x7ee91c1d	_spin_trylock
 EXPORT_SYMBOL vmlinux 0x7f10f0c7	set_user_nice
 EXPORT_SYMBOL vmlinux 0x7f24de73	jiffies_to_usecs
@@ -3840,7 +3843,6 @@ EXPORT_SYMBOL vmlinux 0x95311e3f	jbd2_journal_release_buffer
 EXPORT_SYMBOL vmlinux 0x9538b0de	init_file
 EXPORT_SYMBOL vmlinux 0x954488a4	syncookie_secret
 EXPORT_SYMBOL vmlinux 0x954cbb26	vsprintf
-EXPORT_SYMBOL vmlinux 0x955ab138	call_usermodehelper_exec
 EXPORT_SYMBOL vmlinux 0x957dea20	d_instantiate
 EXPORT_SYMBOL vmlinux 0x957e8c11	__task_pid_nr_ns
 EXPORT_SYMBOL vmlinux 0x958137ae	d_prune_aliases
@@ -3998,7 +4000,6 @@ EXPORT_SYMBOL vmlinux 0xa132e3a4	phy_disconnect
 EXPORT_SYMBOL vmlinux 0xa135e0f5	dget_locked
 EXPORT_SYMBOL vmlinux 0xa13798f8	printk_ratelimit
 EXPORT_SYMBOL vmlinux 0xa13de057	bio_alloc
-EXPORT_SYMBOL vmlinux 0xa140f90a	call_usermodehelper_setcleanup
 EXPORT_SYMBOL vmlinux 0xa1638cb8	nla_reserve_nohdr
 EXPORT_SYMBOL vmlinux 0xa1840229	tty_port_block_til_ready
 EXPORT_SYMBOL vmlinux 0xa1ad6e8b	blkdev_get
@@ -4367,7 +4368,6 @@ EXPORT_SYMBOL vmlinux 0xc0a3d105	find_next_bit
 EXPORT_SYMBOL vmlinux 0xc0ad47b8	vfs_statfs
 EXPORT_SYMBOL vmlinux 0xc0b31ce3	blk_queue_bounce_limit
 EXPORT_SYMBOL vmlinux 0xc0bf6ead	timecounter_cyc2time
-EXPORT_SYMBOL vmlinux 0xc0d173f0	call_usermodehelper_stdinpipe
 EXPORT_SYMBOL vmlinux 0xc0ef5a25	journal_init_inode
 EXPORT_SYMBOL vmlinux 0xc0f05707	vfs_quota_sync
 EXPORT_SYMBOL vmlinux 0xc104234c	per_cpu__current_task
@@ -4469,6 +4469,7 @@ EXPORT_SYMBOL vmlinux 0xca0294fb	skb_trim
 EXPORT_SYMBOL vmlinux 0xca18a929	jbd2_journal_forget
 EXPORT_SYMBOL vmlinux 0xca199cba	swiotlb_sync_single_for_device
 EXPORT_SYMBOL vmlinux 0xca396d65	do_splice_from
+EXPORT_SYMBOL vmlinux 0xca5c5f0d	call_usermodehelper_exec
 EXPORT_SYMBOL vmlinux 0xca7a3b5b	get_sb_pseudo
 EXPORT_SYMBOL vmlinux 0xca8332cf	blkdev_issue_discard
 EXPORT_SYMBOL vmlinux 0xca8e08e2	sync_inode
@@ -4702,7 +4703,6 @@ EXPORT_SYMBOL vmlinux 0xdd9c93ad	ip_cmsg_recv
 EXPORT_SYMBOL vmlinux 0xddb25550	tcp_ioctl
 EXPORT_SYMBOL vmlinux 0xde0a66ea	dev_kfree_skb_irq
 EXPORT_SYMBOL vmlinux 0xde2f3135	pci_vpd_truncate
-EXPORT_SYMBOL vmlinux 0xde3108d5	call_usermodehelper_setup
 EXPORT_SYMBOL vmlinux 0xde31b902	blk_limits_io_opt
 EXPORT_SYMBOL vmlinux 0xde3b14cf	inode_get_bytes
 EXPORT_SYMBOL vmlinux 0xde75b689	set_irq_type
@@ -6765,6 +6765,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x14335f29	net_accel_msg_peek
 EXPORT_SYMBOL_GPL vmlinux 0x1435483e	tracepoint_iter_stop
 EXPORT_SYMBOL_GPL vmlinux 0x149db923	selinux_string_to_sid
 EXPORT_SYMBOL_GPL vmlinux 0x14ce4100	rt_mutex_trylock
+EXPORT_SYMBOL_GPL vmlinux 0x1556756b	usermodehelper_is_disabled
 EXPORT_SYMBOL_GPL vmlinux 0x15568631	lookup_address
 EXPORT_SYMBOL_GPL vmlinux 0x156a1b76	crypto_unregister_alg
 EXPORT_SYMBOL_GPL vmlinux 0x15714570	setup_irq
@@ -7157,6 +7158,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x5ead562e	gpiochip_is_requested
 EXPORT_SYMBOL_GPL vmlinux 0x5f2b696c	queue_work_on
 EXPORT_SYMBOL_GPL vmlinux 0x5fcdec5d	xfrm_ealg_get_byidx
 EXPORT_SYMBOL_GPL vmlinux 0x5ff7d206	inet_twsk_purge
+EXPORT_SYMBOL_GPL vmlinux 0x6040fd4b	read_unlock_usermodehelper
 EXPORT_SYMBOL_GPL vmlinux 0x60949e1e	srcu_init_notifier_head
 EXPORT_SYMBOL_GPL vmlinux 0x60a13e90	rcu_barrier
 EXPORT_SYMBOL_GPL vmlinux 0x61053d07	transport_add_device
@@ -7644,6 +7646,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xc2d5e4d0	platform_get_resource
 EXPORT_SYMBOL_GPL vmlinux 0xc2f8fee6	pciserial_init_ports
 EXPORT_SYMBOL_GPL vmlinux 0xc3301f02	rcu_expedited_torture_stats
 EXPORT_SYMBOL_GPL vmlinux 0xc34efe27	snmp_fold_field
+EXPORT_SYMBOL_GPL vmlinux 0xc3aa2836	read_lock_usermodehelper
 EXPORT_SYMBOL_GPL vmlinux 0xc3c84335	spi_setup
 EXPORT_SYMBOL_GPL vmlinux 0xc44a27e0	sysdev_driver_register
 EXPORT_SYMBOL_GPL vmlinux 0xc47a8de3	crypto_ablkcipher_type
