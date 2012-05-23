@@ -4,6 +4,15 @@ linux-ec2 (2.6.32-345.49) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 2.6.32-41.90 ]
+
+  * [Config] control.stub is an intermediate product not a dependancy
+    - LP: #992414
+  * [Config] perarch and indep tools builds need separate build directories
+  * hugepages: fix use after free bug in "quota" handling
+    - LP: #990368
+    - CVE-2012-2133
+
  -- Stefan Bader <stefan.bader@canonical.com>  Wed, 23 May 2012 15:34:49 +0200
 
 linux-ec2 (2.6.32-345.48) lucid-proposed; urgency=low
