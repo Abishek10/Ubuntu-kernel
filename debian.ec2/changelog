@@ -4,6 +4,17 @@ linux-ec2 (2.6.32-346.51) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 2.6.32-41.93 ]
+
+  * No change upload to fix .ddeb generation in the PPA.
+
+  [ Ubuntu: 2.6.32-41.92 ]
+
+  * drm/i915: Move Pineview CxSR and watermark code into update_wm hook.
+    - LP: #1004707
+  * drm/i915: Add CxSR support on Pineview DDR3
+    - LP: #1004707
+
  -- Stefan Bader <stefan.bader@canonical.com>  Mon, 25 Jun 2012 11:20:40 +0200
 
 linux-ec2 (2.6.32-345.50) lucid-proposed; urgency=low
