@@ -131,20 +131,10 @@ static inline int skb_gso_ok(struct sk_buff *skb, int features)
         return (features & NETIF_F_TSO);
 }
 
-static inline int netif_skb_features(struct net_device *dev, struct sk_buff *skb)
-{
-	int features = dev->features;
-
-	if (skb_shinfo(skb)->gso_segs > skb->dev->gso_max_segs)
-		features &= ~NETIF_F_GSO_MASK;
-
-	return features;
-}
-
-static inline int netif_needs_gso(struct sk_buff *skbi, int features)
+static inline int netif_needs_gso(struct net_device *dev, struct sk_buff *skb)
 {
         return skb_is_gso(skb) &&
-               (!skb_gso_ok(skb, features) ||
+               (!skb_gso_ok(skb, dev->features) ||
                 unlikely(skb->ip_summed != CHECKSUM_PARTIAL));
 }
 #else
@@ -967,7 +957,7 @@ static int network_start_xmit(struct sk_buff *skb, struct net_device *dev)
 
 	if (unlikely(!netfront_carrier_ok(np) ||
 		     (frags > 1 && !xennet_can_sg(dev)) ||
-		     netif_needs_gso(skb, netif_skb_features(dev, skb)))) {
+		     netif_needs_gso(dev, skb))) {
 		spin_unlock_irq(&np->tx_lock);
 		goto drop;
 	}
