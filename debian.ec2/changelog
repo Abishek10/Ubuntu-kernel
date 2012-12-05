@@ -4,6 +4,12 @@ linux-ec2 (2.6.32-350.58) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 2.6.32-45.101 ]
+
+  * ipv6: discard overlapping fragment
+    - LP: #1079859
+    - CVE-2012-4444
+
  -- Stefan Bader <stefan.bader@canonical.com>  Wed, 05 Dec 2012 12:35:17 +0100
 
 linux-ec2 (2.6.32-350.57) lucid-proposed; urgency=low
