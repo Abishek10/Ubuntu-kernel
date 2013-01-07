@@ -4,6 +4,15 @@ linux-ec2 (2.6.32-350.59) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 2.6.32-45.102 ]
+
+  * SAUCE: exec: do not leave bprm->interp on stack
+    - LP: #1068888
+    - CVE-2012-4530
+  * exec: use -ELOOP for max recursion depth
+    - LP: #1068888
+    - CVE-2012-4530
+
  -- Stefan Bader <stefan.bader@canonical.com>  Mon, 07 Jan 2013 11:34:09 +0100
 
 linux-ec2 (2.6.32-350.58) lucid-proposed; urgency=low
