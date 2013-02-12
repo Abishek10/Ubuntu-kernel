@@ -4212,6 +4212,7 @@ EXPORT_SYMBOL vmlinux 0xb163524b	qdisc_warn_nonwc
 EXPORT_SYMBOL vmlinux 0xb1645a2e	sg_free_table
 EXPORT_SYMBOL vmlinux 0xb18dd0c0	simple_getattr
 EXPORT_SYMBOL vmlinux 0xb19760c3	bitmap_onto
+EXPORT_SYMBOL vmlinux 0xb1a5e9b5	bprm_change_interp
 EXPORT_SYMBOL vmlinux 0xb1c3a01a	oops_in_progress
 EXPORT_SYMBOL vmlinux 0xb1cfad22	rdmsr_on_cpu
 EXPORT_SYMBOL vmlinux 0xb1f975aa	unlock_kernel
