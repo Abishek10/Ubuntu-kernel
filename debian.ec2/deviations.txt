@@ -7,7 +7,6 @@ F:	arch/x86/kernel/ioport.c
 F:	arch/x86/kernel/smp.c
 F:	arch/x86/kernel/process_32.c
 F:	arch/x86/kernel/setup.c
-F:	arch/x86/kernel/msr.c
 F:	arch/x86/kernel/quirks.c
 F:	arch/x86/kernel/entry_64.S
 F:	arch/x86/kernel/process.c
