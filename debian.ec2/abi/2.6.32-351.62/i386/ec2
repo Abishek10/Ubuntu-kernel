@@ -2937,7 +2937,6 @@ EXPORT_SYMBOL vmlinux 0x4550ba8a	register_cpu_notifier
 EXPORT_SYMBOL vmlinux 0x45537c18	xfrm_policy_destroy
 EXPORT_SYMBOL vmlinux 0x4555b908	mod_zone_page_state
 EXPORT_SYMBOL vmlinux 0x456e94d1	xfrm_state_lookup
-EXPORT_SYMBOL vmlinux 0x4575315d	utf8s_to_utf16s
 EXPORT_SYMBOL vmlinux 0x457a12c9	wait_for_completion_interruptible
 EXPORT_SYMBOL vmlinux 0x457eab87	bio_clone
 EXPORT_SYMBOL vmlinux 0x45947727	param_array_set
@@ -4104,6 +4103,7 @@ EXPORT_SYMBOL vmlinux 0xa5e281ec	__seq_open_private
 EXPORT_SYMBOL vmlinux 0xa6116dd1	unregister_binfmt
 EXPORT_SYMBOL vmlinux 0xa6173e6b	kernel_getsockname
 EXPORT_SYMBOL vmlinux 0xa63d85ab	slhc_remember
+EXPORT_SYMBOL vmlinux 0xa675804c	utf8s_to_utf16s
 EXPORT_SYMBOL vmlinux 0xa68124fa	hweight8
 EXPORT_SYMBOL vmlinux 0xa681fe88	generate_random_uuid
 EXPORT_SYMBOL vmlinux 0xa6967578	lease_get_mtime
