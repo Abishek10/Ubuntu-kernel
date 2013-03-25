@@ -4,6 +4,44 @@ linux-ec2 (2.6.32-351.63) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 2.6.32-46.107 ]
+
+  * SAUCE: signal: Fix use of missing sa_restorer field
+    - LP: #1153813
+    - CVE-2013-0914
+  * ipvs: fix info leak in getsockopt(IP_VS_SO_GET_TIMEOUT)
+    - LP: #1156732
+    - CVE-2012-6540
+  * kernel/signal.c: use __ARCH_HAS_SA_RESTORER instead of SA_RESTORER
+    - LP: #1153813
+    - CVE-2013-0914
+
+  [ Ubuntu: 2.6.32-46.106 ]
+
+  * tmpfs: fix use-after-free of mempolicy object
+    - LP: #1143815
+    - CVE-2013-1767
+  * keys: fix race with concurrent install_user_keyrings()
+    - LP: #1152788
+    - CVE-2013-1792
+  * signal: always clear sa_restorer on execve
+    - LP: #1153813
+    - CVE-2013-0914
+  * Fix ptrace when task is in task_is_stopped(), state
+    - LP: #1145234
+  * xfrm_user: fix info leak in copy_to_user_tmpl()
+    - LP: #1156716
+    - CVE-2012-6537
+  * xfrm_user: fix info leak in copy_to_user_policy()
+    - LP: #1156716
+    - CVE-2012-6537
+  * xfrm_user: fix info leak in copy_to_user_state()
+    - LP: #1156716
+    - CVE-2012-6537
+  * net: fix info leak in compat dev_ifconf()
+    - LP: #1156728
+    - CVE-2012-6539
+
  -- Stefan Bader <stefan.bader@canonical.com>  Mon, 25 Mar 2013 14:38:06 +0100
 
 linux-ec2 (2.6.32-351.62) lucid-proposed; urgency=low
