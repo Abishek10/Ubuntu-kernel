@@ -6078,6 +6078,7 @@ EXPORT_SYMBOL_GPL net/ax25/ax25 0xac93ae05	ax25_bcast
 EXPORT_SYMBOL_GPL net/ax25/ax25 0xaeb7451e	ax25_defaddr
 EXPORT_SYMBOL_GPL net/ax25/ax25 0xb337d676	ax25_register_pid
 EXPORT_SYMBOL_GPL net/bluetooth/bluetooth 0xb4553836	bt_class
+EXPORT_SYMBOL_GPL net/dccp/dccp 0x161820aa	dccp_parse_options
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x18e4d988	dccp_close
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x19ed13b4	dccp_make_response
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x1d99d49a	dccp_timestamp
@@ -6094,6 +6095,7 @@ EXPORT_SYMBOL_GPL net/dccp/dccp 0x5afe10a5	dccp_set_state
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x61ab6705	dccp_death_row
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x628e7eb6	dccp_connect
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x68d09b4a	dccp_insert_option
+EXPORT_SYMBOL_GPL net/dccp/dccp 0x6f2d11da	dccp_reqsk_init
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x7101b5ef	dccp_recvmsg
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x86be7924	dccp_packet_name
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x8b7d8caf	dccp_statistics
@@ -6102,7 +6104,6 @@ EXPORT_SYMBOL_GPL net/dccp/dccp 0xa3b6cd0e	dccp_insert_option_elapsed_time
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xa4780faa	dccp_insert_option_timestamp
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xab46de6b	dccp_send_sync
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xafab40fe	dccp_poll
-EXPORT_SYMBOL_GPL net/dccp/dccp 0xc508712a	dccp_reqsk_init
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xcd169336	dccp_done
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xcec85a86	dccp_rcv_established
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xcf9ceca8	dccp_hashinfo
@@ -6112,7 +6113,6 @@ EXPORT_SYMBOL_GPL net/dccp/dccp 0xdbb8a6da	dccp_send_ack
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xdc379b21	dccp_ioctl
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xdd284c25	dccp_setsockopt
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xdec67d4d	dccp_sync_mss
-EXPORT_SYMBOL_GPL net/dccp/dccp 0xe0aed9c8	dccp_parse_options
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xe0c254fa	dccp_destroy_sock
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xe2ca56bc	dccp_init_sock
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xe43c40e3	dccp_shutdown
@@ -7337,6 +7337,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x7e1301d1	__wake_up_sync
 EXPORT_SYMBOL_GPL vmlinux 0x7e44f919	mmput
 EXPORT_SYMBOL_GPL vmlinux 0x7e91f260	handle_level_irq
 EXPORT_SYMBOL_GPL vmlinux 0x7eda235a	seq_release_net
+EXPORT_SYMBOL_GPL vmlinux 0x7f43c11b	ip_build_and_send_pkt
 EXPORT_SYMBOL_GPL vmlinux 0x7f615286	tty_encode_baud_rate
 EXPORT_SYMBOL_GPL vmlinux 0x7f72f7ed	transport_setup_device
 EXPORT_SYMBOL_GPL vmlinux 0x7ff10ccf	raw_notifier_call_chain
@@ -7346,7 +7347,6 @@ EXPORT_SYMBOL_GPL vmlinux 0x8039d043	selinux_secmark_relabel_packet_permission
 EXPORT_SYMBOL_GPL vmlinux 0x806cfedc	d_materialise_unique
 EXPORT_SYMBOL_GPL vmlinux 0x808ec1a3	crypto_alg_tested
 EXPORT_SYMBOL_GPL vmlinux 0x80dc50b0	devres_find
-EXPORT_SYMBOL_GPL vmlinux 0x80eacac6	ip_build_and_send_pkt
 EXPORT_SYMBOL_GPL vmlinux 0x80ee55c3	selinux_secmark_refcount_inc
 EXPORT_SYMBOL_GPL vmlinux 0x81124eed	atomic_notifier_call_chain
 EXPORT_SYMBOL_GPL vmlinux 0x811ab736	blk_update_request
@@ -7681,7 +7681,6 @@ EXPORT_SYMBOL_GPL vmlinux 0xcc05d17f	device_move
 EXPORT_SYMBOL_GPL vmlinux 0xcc1f1c3d	inet_twdr_hangman
 EXPORT_SYMBOL_GPL vmlinux 0xcc248a4a	uhci_check_and_reset_hc
 EXPORT_SYMBOL_GPL vmlinux 0xcc3ad411	sk_setup_caps
-EXPORT_SYMBOL_GPL vmlinux 0xcc79f65c	tcp_cong_avoid_ai
 EXPORT_SYMBOL_GPL vmlinux 0xcd2e38bf	__rt_mutex_init
 EXPORT_SYMBOL_GPL vmlinux 0xcd344f4f	input_ff_event
 EXPORT_SYMBOL_GPL vmlinux 0xcd5daa06	pci_hp_create_module_link
@@ -7690,6 +7689,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xcd956ef5	driver_remove_file
 EXPORT_SYMBOL_GPL vmlinux 0xcdca3691	nr_irqs
 EXPORT_SYMBOL_GPL vmlinux 0xcde5b137	trace_define_common_fields
 EXPORT_SYMBOL_GPL vmlinux 0xcded527c	__get_user_pages_fast
+EXPORT_SYMBOL_GPL vmlinux 0xce15cf17	tcp_slow_start
 EXPORT_SYMBOL_GPL vmlinux 0xce5cf2cc	disk_map_sector_rcu
 EXPORT_SYMBOL_GPL vmlinux 0xce9b66b6	net_accel_msg_peek
 EXPORT_SYMBOL_GPL vmlinux 0xcea7f5f0	ring_buffer_normalize_time_stamp
@@ -7787,7 +7787,6 @@ EXPORT_SYMBOL_GPL vmlinux 0xe5084326	crypto_unregister_alg
 EXPORT_SYMBOL_GPL vmlinux 0xe513afc0	cache_k8_northbridges
 EXPORT_SYMBOL_GPL vmlinux 0xe51fee84	platform_device_register_simple
 EXPORT_SYMBOL_GPL vmlinux 0xe530071c	pm_qos_remove_requirement
-EXPORT_SYMBOL_GPL vmlinux 0xe5c2558b	tcp_slow_start
 EXPORT_SYMBOL_GPL vmlinux 0xe5d8d4c5	vfs_test_lock
 EXPORT_SYMBOL_GPL vmlinux 0xe5fa8fb3	class_compat_register
 EXPORT_SYMBOL_GPL vmlinux 0xe6031759	net_accel_msg_recv_next
@@ -7841,6 +7840,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xefdd5a63	ktime_get_ts
 EXPORT_SYMBOL_GPL vmlinux 0xefe21106	snmp_mib_init
 EXPORT_SYMBOL_GPL vmlinux 0xefef0909	register_kprobes
 EXPORT_SYMBOL_GPL vmlinux 0xf00b6d88	blkcipher_walk_phys
+EXPORT_SYMBOL_GPL vmlinux 0xf02dd22a	tcp_cong_avoid_ai
 EXPORT_SYMBOL_GPL vmlinux 0xf06c1cc7	unregister_timer_hook
 EXPORT_SYMBOL_GPL vmlinux 0xf0fe8b9a	power_supply_class
 EXPORT_SYMBOL_GPL vmlinux 0xf12f586b	pci_reset_function

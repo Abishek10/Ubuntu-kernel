@@ -6114,6 +6114,7 @@ EXPORT_SYMBOL_GPL net/dccp/dccp 0x25389be6	dccp_getsockopt
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x2a090269	dccp_shutdown
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x35d599d6	dccp_orphan_count
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x375939eb	dccp_recvmsg
+EXPORT_SYMBOL_GPL net/dccp/dccp 0x3c3f307a	dccp_parse_options
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x3c5b432c	dccp_check_req
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x4cd9f627	dccp_set_state
 EXPORT_SYMBOL_GPL net/dccp/dccp 0x4cdd391d	dccp_feat_list_purge
@@ -6138,11 +6139,10 @@ EXPORT_SYMBOL_GPL net/dccp/dccp 0xc2de3165	compat_dccp_getsockopt
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xc4293e62	dccp_insert_option_timestamp
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xc98fd48f	dccp_make_response
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xd0d1d36d	dccp_poll
-EXPORT_SYMBOL_GPL net/dccp/dccp 0xd590bfc8	dccp_reqsk_init
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xe503be5b	dccp_destroy_sock
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xf457bfde	compat_dccp_setsockopt
-EXPORT_SYMBOL_GPL net/dccp/dccp 0xf80f683f	dccp_parse_options
 EXPORT_SYMBOL_GPL net/dccp/dccp 0xfb7413db	dccp_create_openreq_child
+EXPORT_SYMBOL_GPL net/dccp/dccp 0xff09f2a9	dccp_reqsk_init
 EXPORT_SYMBOL_GPL net/dccp/dccp_ipv4 0x3e178b14	dccp_invalid_packet
 EXPORT_SYMBOL_GPL net/dccp/dccp_ipv4 0x62747ff7	dccp_v4_send_check
 EXPORT_SYMBOL_GPL net/dccp/dccp_ipv4 0x8123140e	dccp_v4_conn_request
@@ -6930,6 +6930,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x3083023e	debugfs_create_dir
 EXPORT_SYMBOL_GPL vmlinux 0x30a36788	securityfs_remove
 EXPORT_SYMBOL_GPL vmlinux 0x30c0590b	br_handle_frame_hook
 EXPORT_SYMBOL_GPL vmlinux 0x30c305ff	generic_fh_to_parent
+EXPORT_SYMBOL_GPL vmlinux 0x30d25dcb	tcp_slow_start
 EXPORT_SYMBOL_GPL vmlinux 0x31494942	platform_bus_type
 EXPORT_SYMBOL_GPL vmlinux 0x315bf067	debugfs_create_u32
 EXPORT_SYMBOL_GPL vmlinux 0x322d60c8	__pci_reset_function
@@ -6962,7 +6963,6 @@ EXPORT_SYMBOL_GPL vmlinux 0x38628c0e	crypto_unregister_shash
 EXPORT_SYMBOL_GPL vmlinux 0x386e7685	aead_geniv_alloc
 EXPORT_SYMBOL_GPL vmlinux 0x38abc700	cleanup_srcu_struct
 EXPORT_SYMBOL_GPL vmlinux 0x39eb0a54	spi_busnum_to_master
-EXPORT_SYMBOL_GPL vmlinux 0x3a35ccf7	tcp_cong_avoid_ai
 EXPORT_SYMBOL_GPL vmlinux 0x3a689755	crypto_spawn_tfm2
 EXPORT_SYMBOL_GPL vmlinux 0x3a86c722	tcp_reno_cong_avoid
 EXPORT_SYMBOL_GPL vmlinux 0x3aaa51c9	netfront_accelerator_loaded
@@ -7200,6 +7200,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x6901119a	trace_nowake_buffer_unlock_commit
 EXPORT_SYMBOL_GPL vmlinux 0x693dd5b4	kern_mount_data
 EXPORT_SYMBOL_GPL vmlinux 0x694107ac	inverse_translate
 EXPORT_SYMBOL_GPL vmlinux 0x694b58bc	raw_seq_open
+EXPORT_SYMBOL_GPL vmlinux 0x697086aa	tcp_cong_avoid_ai
 EXPORT_SYMBOL_GPL vmlinux 0x69cad83d	pcie_port_bus_type
 EXPORT_SYMBOL_GPL vmlinux 0x69dc6d69	cuckoo_hash_lookup
 EXPORT_SYMBOL_GPL vmlinux 0x69ddb993	__get_vm_area
@@ -7588,7 +7589,6 @@ EXPORT_SYMBOL_GPL vmlinux 0xb9765c85	trace_define_field
 EXPORT_SYMBOL_GPL vmlinux 0xb97b8588	xen_tlb_flush_all
 EXPORT_SYMBOL_GPL vmlinux 0xb99d5837	xenbus_read
 EXPORT_SYMBOL_GPL vmlinux 0xb9bf152f	do_kern_mount
-EXPORT_SYMBOL_GPL vmlinux 0xb9d1b4db	ip_build_and_send_pkt
 EXPORT_SYMBOL_GPL vmlinux 0xb9eb3aa9	add_uevent_var
 EXPORT_SYMBOL_GPL vmlinux 0xba265e7b	tcp_is_cwnd_limited
 EXPORT_SYMBOL_GPL vmlinux 0xba55987e	crypto_register_alg
@@ -7712,7 +7712,6 @@ EXPORT_SYMBOL_GPL vmlinux 0xd07a724d	driver_add_kobj
 EXPORT_SYMBOL_GPL vmlinux 0xd0c05159	emergency_restart
 EXPORT_SYMBOL_GPL vmlinux 0xd0f0f762	vfs_lock_file
 EXPORT_SYMBOL_GPL vmlinux 0xd0f93d63	pskb_put
-EXPORT_SYMBOL_GPL vmlinux 0xd110ccfa	tcp_slow_start
 EXPORT_SYMBOL_GPL vmlinux 0xd11d4f78	put_inotify_watch
 EXPORT_SYMBOL_GPL vmlinux 0xd1209b14	driver_create_file
 EXPORT_SYMBOL_GPL vmlinux 0xd12554a3	net_accel_msg_complete_send_notify
@@ -7842,6 +7841,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xe9fafeb3	pci_hp_create_module_link
 EXPORT_SYMBOL_GPL vmlinux 0xea065e01	task_handoff_unregister
 EXPORT_SYMBOL_GPL vmlinux 0xea124bd1	gcd
 EXPORT_SYMBOL_GPL vmlinux 0xea4337f0	crypto_grab_aead
+EXPORT_SYMBOL_GPL vmlinux 0xeab29407	ip_build_and_send_pkt
 EXPORT_SYMBOL_GPL vmlinux 0xeaf589bd	flush_workqueue
 EXPORT_SYMBOL_GPL vmlinux 0xeb4c1fc8	__tracepoint_block_remap
 EXPORT_SYMBOL_GPL vmlinux 0xeb8131b6	register_pernet_gen_device
