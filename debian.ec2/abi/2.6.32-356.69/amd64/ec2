@@ -4226,6 +4226,7 @@ EXPORT_SYMBOL vmlinux 0xad3c7e5e	blk_recount_segments
 EXPORT_SYMBOL vmlinux 0xad488629	cdev_alloc
 EXPORT_SYMBOL vmlinux 0xad58f4e3	dquot_destroy
 EXPORT_SYMBOL vmlinux 0xad8856d6	cdev_add
+EXPORT_SYMBOL vmlinux 0xad922f75	udp_push_pending_frames
 EXPORT_SYMBOL vmlinux 0xad948745	kobject_add
 EXPORT_SYMBOL vmlinux 0xadc5d868	eth_header
 EXPORT_SYMBOL vmlinux 0xadfb0df0	pci_request_region

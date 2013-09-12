@@ -3026,6 +3026,7 @@ EXPORT_SYMBOL vmlinux 0x4b9870e4	block_write_begin
 EXPORT_SYMBOL vmlinux 0x4ba379d6	dma_supported
 EXPORT_SYMBOL vmlinux 0x4ba56fa7	blk_put_request
 EXPORT_SYMBOL vmlinux 0x4bb02247	blk_peek_request
+EXPORT_SYMBOL vmlinux 0x4bb257dc	udp_push_pending_frames
 EXPORT_SYMBOL vmlinux 0x4bbc3e5f	pm_flags
 EXPORT_SYMBOL vmlinux 0x4bbe08ad	file_fsync
 EXPORT_SYMBOL vmlinux 0x4bca3b50	bdi_set_max_ratio
