@@ -4,6 +4,33 @@ linux-ec2 (2.6.32-358.71) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 2.6.32-53.115 ]
+
+  * HID: provide a helper for validating hid reports
+    - LP: #1220190
+    - CVE-2013-2889
+  * HID: zeroplus: validate output report details
+    - LP: #1220190
+    - CVE-2013-2889
+  * HID: LG: validate HID output report details
+    - LP: #1220190
+    - CVE-2013-2893
+  * cciss: fix info leak in cciss_ioctl32_passthru()
+    - LP: #1188355
+    - CVE-2013-2147
+  * cpqarray: fix info leak in ida_locked_ioctl()
+    - LP: #1188355
+    - CVE-2013-2147
+  * HID: add usage_index in struct hid_usage.
+    - LP: #1220205
+    - CVE-CVE-2013-2897
+  * HID: validate feature and input report details
+    - LP: #1220205
+    - CVE-2013-2897
+  * dm snapshot: fix data corruption
+    - LP: #1241769
+    - CVE-2013-4299
+
  -- Stefan Bader <stefan.bader@canonical.com>  Thu, 24 Oct 2013 09:00:55 +0100
 
 linux-ec2 (2.6.32-357.70) lucid-proposed; urgency=low
