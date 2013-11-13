@@ -4,6 +4,17 @@ linux-ec2 (2.6.32-359.72) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 2.6.32-54.116 ]
+
+  * SAUCE: ACPI battery: fix compiler warning
+    - LP: #1247154
+  * KVM: unmap pages from the iommu when slots are removed
+    - LP: #987569
+    - CVE-2012-2121
+  * uml: check length in exitcode_proc_write()
+    - LP: #1249271
+    - CVE-2013-4512
+
  -- Stefan Bader <stefan.bader@canonical.com>  Wed, 13 Nov 2013 11:07:53 +0100
 
 linux-ec2 (2.6.32-358.71) lucid-proposed; urgency=low
