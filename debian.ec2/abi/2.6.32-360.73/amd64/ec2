@@ -2803,6 +2803,7 @@ EXPORT_SYMBOL vmlinux 0x38060c89	pci_get_device
 EXPORT_SYMBOL vmlinux 0x388f9128	xfrm_state_walk_done
 EXPORT_SYMBOL vmlinux 0x38976dad	sock_create_lite
 EXPORT_SYMBOL vmlinux 0x38a2848a	__locks_copy_lock
+EXPORT_SYMBOL vmlinux 0x38b14183	vm_iomap_memory
 EXPORT_SYMBOL vmlinux 0x38b92846	llc_remove_pack
 EXPORT_SYMBOL vmlinux 0x38dd50f1	alloc_disk_node
 EXPORT_SYMBOL vmlinux 0x38f33bed	dump_fpu

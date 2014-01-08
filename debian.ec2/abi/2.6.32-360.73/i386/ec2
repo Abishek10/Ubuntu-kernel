@@ -3247,6 +3247,7 @@ EXPORT_SYMBOL vmlinux 0x5c4263fd	wait_for_completion_interruptible_timeout
 EXPORT_SYMBOL vmlinux 0x5c6a9f6f	inet_addr_type
 EXPORT_SYMBOL vmlinux 0x5cb11ecc	put_page
 EXPORT_SYMBOL vmlinux 0x5cd751fa	kobject_add
+EXPORT_SYMBOL vmlinux 0x5ce90e98	vm_iomap_memory
 EXPORT_SYMBOL vmlinux 0x5d121008	blkdev_issue_flush
 EXPORT_SYMBOL vmlinux 0x5d2413c3	backlight_device_register
 EXPORT_SYMBOL vmlinux 0x5d310fbc	ethtool_op_get_rx_csum
