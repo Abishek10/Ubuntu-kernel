@@ -1,3 +1,9 @@
+linux-meta-lts-trusty (3.13.0.24.21) precise; urgency=low
+
+  * Ubuntu-lts-3.13.0-24
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Wed, 09 Apr 2014 12:37:53 -0600
+
 linux-meta-lts-trusty (3.13.0.23.20) precise; urgency=low
 
   * Ubuntu-lts-3.13.0-23
