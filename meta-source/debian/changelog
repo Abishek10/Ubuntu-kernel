@@ -1,3 +1,9 @@
+linux-ports-meta (2.6.32.59.51) lucid; urgency=low
+
+  * Bump ABI
+
+ -- Brad Figg <brad.figg@canonical.com>  Tue, 29 Apr 2014 06:20:02 -0700
+
 linux-ports-meta (2.6.32.58.50) lucid; urgency=low
 
   * Bump ABI
