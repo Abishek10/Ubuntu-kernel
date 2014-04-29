@@ -1,3 +1,11 @@
+linux-backports-modules-3.2.0 (3.2.0-62.52) precise; urgency=low
+
+  [ Brad Figg ]
+
+  * Bump ABI
+
+ -- Brad Figg <brad.figg@canonical.com>  Tue, 29 Apr 2014 06:41:49 -0700
+
 linux-backports-modules-3.2.0 (3.2.0-61.51) precise; urgency=low
 
   [ Kamal Mostafa ]
