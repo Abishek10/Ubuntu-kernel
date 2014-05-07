@@ -1,3 +1,11 @@
+linux-meta (3.2.0.63.74) precise; urgency=low
+
+  [ Kamal Mostafa ]
+
+  * Bump ABI
+
+ -- Kamal Mostafa <kamal@canonical.com>  Wed, 07 May 2014 14:34:18 -0700
+
 linux-meta (3.2.0.62.73) precise; urgency=low
 
   [ Brad Figg ]
