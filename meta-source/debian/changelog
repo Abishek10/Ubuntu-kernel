@@ -1,3 +1,9 @@
+linux-meta-lts-raring (3.8.0.41.41) precise; urgency=low
+
+  * Ubuntu-lts-3.8.0-41
+
+ -- Kamal Mostafa <kamal@canonical.com>  Wed, 07 May 2014 15:10:59 -0700
+
 linux-meta-lts-raring (3.8.0.40.40) precise; urgency=low
 
   * Ubuntu-lts-3.8.0-40.40
