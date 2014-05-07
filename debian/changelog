@@ -1,3 +1,9 @@
+linux-backports-modules-2.6.32 (2.6.32-60.62) lucid; urgency=low
+
+  * Start new release (and bump ABI)
+
+ -- Kamal Mostafa <kamal@canonical.com>  Wed, 07 May 2014 13:35:21 -0700
+
 linux-backports-modules-2.6.32 (2.6.32-59.61) lucid; urgency=low
 
   * Start new release (and bump ABI)
