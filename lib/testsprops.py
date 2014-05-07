@@ -43,7 +43,7 @@ TestProfiles = {
     'ubuntu_qrt_kernel' : {
         'packages' : {
             'common' : [
-                'build-essential', 'libcap2-bin', 'gcc-multilib', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
+                'build-essential', 'libcap2-bin', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
                 ],
             },
         },
@@ -51,7 +51,7 @@ TestProfiles = {
     'ubuntu_qrt_kernel_aslr_collisions' : {
         'packages' : {
             'common' : [
-                'build-essential', 'libcap2-bin', 'gcc-multilib', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
+                'build-essential', 'libcap2-bin', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
                 ],
             },
         },
@@ -59,7 +59,7 @@ TestProfiles = {
     'ubuntu_qrt_kernel_hardening' : {
         'packages' : {
             'common' : [
-                'build-essential', 'libcap2-bin', 'gcc-multilib', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
+                'build-essential', 'libcap2-bin', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
                 ],
             },
         },
@@ -67,7 +67,7 @@ TestProfiles = {
     'ubuntu_qrt_kernel_panic' : {
         'packages' : {
             'common' : [
-                'build-essential', 'libcap2-bin', 'gcc-multilib', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
+                'build-essential', 'libcap2-bin', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
                 ],
             },
         },
@@ -75,7 +75,7 @@ TestProfiles = {
     'ubuntu_qrt_kernel_security' : {
         'packages' : {
             'common' : [
-                'build-essential', 'libcap2-bin', 'gcc-multilib', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
+                'build-essential', 'libcap2-bin', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
                 ],
             },
         },
@@ -83,7 +83,7 @@ TestProfiles = {
     'ubuntu_qrt_apparmor' : {
         'packages' : {
             'common' : [
-                'build-essential', 'libcap2-bin', 'gcc-multilib', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
+                'build-essential', 'libcap2-bin', 'gdb', 'gawk', 'execstack', 'exim4', 'libcap-dev', 'gdb',
                 'python-pexpect', 'apparmor', 'apparmor-utils', 'netcat', 'sudo', 'build-essential', 'libapparmor-dev',
                 'attr', 'apport', 'libpam-apparmor', 'libgtk2.0-dev', 'pyflakes', 'apparmor-profiles', 'quilt', 'libdbus-1-dev'
                 ],
