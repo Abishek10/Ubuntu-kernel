@@ -1,3 +1,10 @@
+linux-meta-lts-trusty (3.13.0.26.22) precise; urgency=low
+
+  * Ubuntu-lts-3.13.0-26
+    - Note that -25 was not released
+
+ -- Kamal Mostafa <kamal@canonical.com>  Thu, 08 May 2014 14:03:29 -0700
+
 linux-meta-lts-trusty (3.13.0.24.21) precise; urgency=low
 
   * Ubuntu-lts-3.13.0-24
