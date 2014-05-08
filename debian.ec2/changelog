@@ -4,6 +4,35 @@ linux-ec2 (2.6.32-364.77) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 2.6.32-60.122 ]
+
+  * merge CVE release 2.6.32-58.121
+  * Revert "n_tty: Fix n_tty_write crash when echoing in raw mode"
+    - LP: #1314762
+  * floppy: ignore kernel-only members in FDRAWCMD ioctl input
+    - LP: #1316729
+    - CVE-2014-1737
+  * floppy: don't write kernel-only members to FDRAWCMD ioctl output
+    - LP: #1316735
+    - CVE-2014-1738
+  * n_tty: Fix n_tty_write crash when echoing in raw mode
+    - LP: #1314762
+    - CVE-2014-0196
+    - switch existing patch for upstream code.
+
+  [ Ubuntu: 2.6.32-59.121 ]
+
+  * rds: prevent dereference of a NULL device in rds_iw_laddr_check
+    - LP: #1302222
+    - CVE-2014-2678
+  * rds: prevent dereference of a NULL device
+    - LP: #1297738
+    - CVE-2013-7339
+
+  [ Ubuntu: 2.6.32-58.121 ]
+
+  * n_tty: Fix n_tty_write crash when echoing in raw mode
+
  -- Stefan Bader <stefan.bader@canonical.com>  Tue, 06 May 2014 11:05:23 -0500
 
 linux-ec2 (2.6.32-363.76) lucid-proposed; urgency=low
