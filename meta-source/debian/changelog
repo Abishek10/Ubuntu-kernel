@@ -1,3 +1,9 @@
+linux-meta-lts-trusty (3.13.0.27.23) precise; urgency=low
+
+  * Ubuntu-lts-3.13.0-27
+
+ -- Brad Figg <brad.figg@canonical.com>  Wed, 14 May 2014 11:46:33 -0700
+
 linux-meta-lts-trusty (3.13.0.26.22) precise; urgency=low
 
   * Ubuntu-lts-3.13.0-26
