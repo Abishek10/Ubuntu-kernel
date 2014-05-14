@@ -59,7 +59,7 @@ Description: Linux kernel versioned Tools
 # This comment applies to the following 4 meta packages.
 #
 # Point to a 12.04 kernel until such time as 12.10 is released. Then update
-# to point to linux-image-generic-lts-backport-quantal. The -hwe- package
+# to point to linux-image-generic-lts-backport-trusty. The -hwe- package
 # is not updated until just before a point release. However, the -current-
 # package always tracks the most recent release. In that way, -hwe- will
 # sometimes lag for a few months before being updated to match -current-.
@@ -68,7 +68,7 @@ Package: linux-image-hwe-generic
 Architecture: i386 amd64 
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, linux-image-generic-lts-quantal
+Depends: ${misc:Depends}, linux-image-generic-lts-trusty
 Description: Depends on the generic hardware enablement kernel image and headers.
  This package will always depend on the generic hardware enablement kernel
  and headers.
@@ -77,7 +77,7 @@ Package: linux-hwe-generic
 Architecture: i386 amd64 
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, linux-image-hwe-generic, linux-headers-generic-lts-quantal
+Depends: ${misc:Depends}, linux-image-hwe-generic, linux-headers-generic-lts-trusty
 Description: Depends on the generic hardware enablement kernel image and headers.
  This package will always depend on the generic hardware enablement kernel
  and headers.
@@ -86,7 +86,7 @@ Package: linux-image-current-generic
 Architecture: i386 amd64 
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, linux-image-generic-lts-raring
+Depends: ${misc:Depends}, linux-image-generic-lts-trusty
 Description: Depends on the most recently released generic kernel image and headers.
  This package will always depend on the latest released generic kernel
  and headers, up to 14.04 inclusive.
@@ -95,7 +95,7 @@ Package: linux-current-generic
 Architecture: i386 amd64 
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, linux-image-generic-lts-raring, linux-headers-generic-lts-raring
+Depends: ${misc:Depends}, linux-image-generic-lts-trusty, linux-headers-generic-lts-trusty
 Description: Depends on the most recently released generic kernel image and headers.
  This package will always depend on the latest released generic kernel
  and headers, up to 14.04 inclusive.
