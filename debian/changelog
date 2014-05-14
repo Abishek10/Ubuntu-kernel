@@ -1,3 +1,10 @@
+ubuntu-kernel-tests (0.0.16-1) unstable; urgency=low
+
+ * [kernel-test-expander] Added apparmor-easyprof to ubuntu_qrt_apparmor tests
+ * [kernel-test-expander] Trusty doesn't have ruby1.8, just ruby
+
+ -- Brad Figg <brad.figg@canonical.com>  Wed, 14 May 2014 07:17:45 -0700
+
 ubuntu-kernel-tests (0.0.15-1) unstable; urgency=low
 
  [kernel-test-expander] Trusty needs the same packages installed for apparmor as saucy
