@@ -1,3 +1,10 @@
+linux-meta (3.2.0.63.75) precise; urgency=medium
+
+  * Update latest HWE kernel to Trusty
+    -LP: #1319471
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Thu, 15 May 2014 06:07:14 -0600
+
 linux-meta (3.2.0.63.74) precise; urgency=low
 
   [ Kamal Mostafa ]
