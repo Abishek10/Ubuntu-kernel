@@ -1,3 +1,11 @@
+linux-meta (2.6.32.61.68) lucid; urgency=medium
+
+  [ Luis Henriques ]
+
+  * Bump ABI
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Wed, 21 May 2014 11:17:14 +0100
+
 linux-meta (2.6.32.60.67) lucid; urgency=low
 
   [ Kamal Mostafa ]
