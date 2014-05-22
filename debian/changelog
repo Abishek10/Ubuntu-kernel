@@ -1,3 +1,12 @@
+linux-backports-modules-3.2.0 (3.2.0-64.56) precise; urgency=low
+
+  [ Luis Henriques ]
+
+  * Drop definition of DMI_EXACT_MATCH
+    - LP: #1319885
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Thu, 22 May 2014 09:58:25 +0100
+
 linux-backports-modules-3.2.0 (3.2.0-64.55) precise; urgency=low
 
   [ Luis Henriques ]
