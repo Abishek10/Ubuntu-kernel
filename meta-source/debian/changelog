@@ -1,3 +1,9 @@
+linux-meta-lts-raring (3.8.0.42.42) precise; urgency=medium
+
+  * Ubuntu-lts-3.8.0-42
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Thu, 22 May 2014 16:16:44 +0100
+
 linux-meta-lts-raring (3.8.0.41.41) precise; urgency=low
 
   * Ubuntu-lts-3.8.0-41
