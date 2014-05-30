@@ -4,7 +4,7 @@ Section: devel
 Priority: optional
 Depends: ${misc:Depends}, linux-headers-${kernel-abi-version}-generic
 Description: Generic Linux kernel headers
- This package will always depend on the latest generic 13.10 kernel headers
+ This package will always depend on the latest generic 14.04 LTS kernel headers
  available.
 
 Package: linux-image-generic-lts-trusty
@@ -13,7 +13,7 @@ Section: metapackages
 Priority: optional
 Depends: ${misc:Depends}, linux-image-${kernel-abi-version}-generic, linux-firmware
 Description: Generic Linux kernel image
- This package will always depend on the latest generic 13.10 kernel image
+ This package will always depend on the latest generic 14.04 LTS kernel image
  available.
 
 Package: linux-tools-generic-lts-trusty
@@ -23,7 +23,7 @@ Priority: optional
 Provides: linux-tools
 Depends: ${misc:Depends}, linux-tools-${kernel-abi-version}-generic
 Description: Generic Linux kernel tools
- This package will always depend on the latest generic 13.10 kernel tools
+ This package will always depend on the latest generic 14.04 LTS kernel tools
  available.
 
 Package: linux-generic-lts-trusty
@@ -32,6 +32,6 @@ Section: metapackages
 Priority: optional
 Depends: ${misc:Depends}, linux-image-generic-lts-trusty, linux-headers-generic-lts-trusty
 Description: Generic Linux kernel image and headers
- This package will always depend on the latest generic 13.10 kernel image
+ This package will always depend on the latest generic 14.04 LTS kernel image
  and headers packages available.
 

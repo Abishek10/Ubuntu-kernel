@@ -1,3 +1,11 @@
+linux-meta-lts-trusty (3.13.0.29.26) UNRELEASED; urgency=medium
+
+  * update meta package descriptions
+    Replace "13.10" with "14.04 LTS" in descriptions of Trusty packages.
+    -LP: #1324886
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Fri, 30 May 2014 14:36:40 +0200
+
 linux-meta-lts-trusty (3.13.0.29.25) precise; urgency=medium
 
   * Ubuntu-lts-3.13.0-29

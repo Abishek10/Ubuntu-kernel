@@ -4,7 +4,7 @@ Section: kernel
 Priority: optional
 Depends: ${misc:Depends}, linux-headers-${kernel-abi-version}-generic-lpae-lts-trusty
 Description: Generic Linux kernel headers
- This package will always depend on the latest generic-lpae 13.10 kernel headers
+ This package will always depend on the latest generic-lpae 14.04 LTS kernel headers
  available.
 
 Package: linux-image-generic-lpae-lts-trusty
@@ -13,7 +13,7 @@ Section: kernel
 Priority: optional
 Depends: ${misc:Depends}, linux-image-${kernel-abi-version}-generic-lpae-lts-trusty, linux-firmware
 Description: Generic Linux kernel image
- This package will always depend on the latest generic-lpae 13.10 kernel image
+ This package will always depend on the latest generic-lpae 14.04 LTS kernel image
  available.
 
 Package: linux-tools-generic-lpae-lts-trusty
@@ -23,7 +23,7 @@ Priority: optional
 Provides: linux-tools
 Depends: ${misc:Depends}, linux-tools-${kernel-abi-version}-generic-lpae
 Description: Generic Linux kernel tools
- This package will always depend on the latest generic-lpae 13.10 kernel tools
+ This package will always depend on the latest generic-lpae 14.04 LTS kernel tools
  available.
 
 Package: linux-generic-lpae-lts-trusty
@@ -32,6 +32,6 @@ Section: kernel
 Priority: optional
 Depends: ${misc:Depends}, linux-image-generic-lpae-lts-trusty (= ${binary:Version}), linux-headers-generic-lpae-lts-trusty (= ${binary:Version})
 Description: Complete Generic Linux kernel and headers
- This package will always depend on the latest complete generic-lpae 13.10 Linux kernel
+ This package will always depend on the latest complete generic-lpae 14.04 LTS Linux kernel
  and headers.
 
