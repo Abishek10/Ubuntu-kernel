@@ -1,3 +1,9 @@
+linux-backports-modules-2.6.32 (2.6.32-63.65) lucid; urgency=low
+
+  * Start new release (and bump ABI)
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Mon, 30 Jun 2014 16:09:47 +0100
+
 linux-backports-modules-2.6.32 (2.6.32-62.64) lucid; urgency=low
 
   * Start new release (and bump ABI)
