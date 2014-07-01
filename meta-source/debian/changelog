@@ -1,3 +1,9 @@
+linux-meta-ec2 (2.6.32.367.48) lucid; urgency=low
+
+  * Bump linux-ec2 ABI to 367 for stable release
+
+ -- Stefan Bader <stefan.bader@canonical.com>  Tue, 01 Jul 2014 16:48:04 +0200
+
 linux-meta-ec2 (2.6.32.366.47) lucid; urgency=low
 
   * Bump linux-ec2 ABI to 366 for stable release
