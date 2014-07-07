@@ -1,3 +1,9 @@
+linux-meta-lts-quantal (3.5.0.54.59) precise; urgency=medium
+
+  * Ubuntu-lts-3.5.0-54
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Mon, 07 Jul 2014 16:08:19 +0100
+
 linux-meta-lts-quantal (3.5.0.53.58) precise; urgency=low
 
   * Ubuntu-lts-3.5.0-53
