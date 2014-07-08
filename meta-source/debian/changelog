@@ -1,3 +1,9 @@
+linux-meta-lts-saucy (3.11.0.26.23) precise; urgency=medium
+
+  * Ubuntu-lts-3.11.0-26
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Tue, 08 Jul 2014 13:53:35 +0100
+
 linux-meta-lts-saucy (3.11.0.25.22) precise; urgency=medium
 
   * Ubuntu-lts-3.11.0-25
