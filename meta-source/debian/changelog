@@ -1,3 +1,9 @@
+linux-meta-ti-omap4 (3.2.0.1451.47) precise; urgency=medium
+
+  * linux-ti-omap4 ABI 3.2.0-1451
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Wed, 09 Jul 2014 15:29:10 +0100
+
 linux-meta-ti-omap4 (3.2.0.1450.46) precise; urgency=medium
 
   * linux-ti-omap4 ABI 3.2.0-1450
