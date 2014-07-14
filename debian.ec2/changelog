@@ -53,6 +53,20 @@ linux-ec2 (2.6.32-367.82) lucid; urgency=low
 
  -- Stefan Bader <stefan.bader@canonical.com>  Tue, 01 Jul 2014 10:14:23 +0200
 
+linux-ec2 (2.6.32-366.81) lucid; urgency=low
+
+  [ Andy Whitcroft ]
+
+  * rebase to Ubuntu-2.6.32-62.126
+
+  [ Ubuntu: 2.6.32-62.126 ]
+
+  * x86_64,ptrace: Enforce RIP <= TASK_SIZE_MAX (CVE-2014-4699)
+    - LP: #1337339
+    - CVE-2014-4699
+
+ -- Andy Whitcroft <apw@canonical.com>  Fri, 04 Jul 2014 18:32:47 +0100
+
 linux-ec2 (2.6.32-366.80) lucid; urgency=low
 
   [ Stefan Bader ]
