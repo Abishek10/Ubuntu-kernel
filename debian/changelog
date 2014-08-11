@@ -1,3 +1,11 @@
+linux-backports-modules-3.2.0 (3.2.0-68.60) precise; urgency=low
+
+  [ Joseph Salisbury ]
+
+  * Bump ABI
+
+ -- Joseph Salisbury <joseph.salisbury@canonical.com>  Mon, 11 Aug 2014 16:30:31 -0400
+
 linux-backports-modules-3.2.0 (3.2.0-67.59) precise; urgency=low
 
   [ Luis Henriques ]
