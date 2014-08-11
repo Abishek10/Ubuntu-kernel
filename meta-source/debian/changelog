@@ -1,3 +1,11 @@
+linux-meta (3.2.0.68.80) precise; urgency=medium
+
+  [ Joseph Salisbury ]
+
+  * Bump ABI
+
+ -- Joseph Salisbury <joseph.salisbury@canonical.com>  Mon, 11 Aug 2014 16:19:37 -0400
+
 linux-meta (3.2.0.67.79) precise; urgency=medium
 
   [ Luis Henriques ]
